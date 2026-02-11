@@ -1,7 +1,9 @@
 import cv2
 import numpy as np
-from pyzbar.pyzbar import decode
 import tkinter as tk
+import webbrowser
+import re
+from pyzbar.pyzbar import decode
 from tkinter import filedialog, messagebox
 from PIL import ImageGrab
 
@@ -54,6 +56,12 @@ def scan_qr_code(image):
             cv2.putText(image, f'{qr_type}: {qr_data}', (x, y - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
             print(f"Detected {qr_type}: {qr_data}")
+
+            # Check if it's a URL
+            # Auto-open feature
+            if re.match(r'https?://', qr_data):
+                print("Opening link in browser...")
+                webbrowser.open(qr_data)
 
         # Show image
         cv2.imshow('QR Code Result', image)
