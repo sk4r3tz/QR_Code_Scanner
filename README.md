@@ -1,14 +1,14 @@
-📷 QR Code Scanner (Python)
+# QR Code Scanner (Python)
 
 A simple Python QR code scanner that reads QR codes from:
 
-📂 Image file (via File Explorer)
+# Image file (via File Explorer)
 
-📋 Clipboard image (copied screenshot or image)
+# Clipboard image (copied screenshot or image)
 
 If the QR code contains a URL, it can automatically open it in your default web browser.
 
-🚀 Features
+# Features
 
 Scan QR code from image file
 
@@ -22,7 +22,7 @@ Automatically open links in browser (if QR contains URL)
 
 Simple and lightweight
 
-🛠️ Requirements
+# Requirements
 
 Python 3.8+
 
@@ -30,7 +30,7 @@ Install dependencies:
 
 pip install opencv-python pyzbar pillow
 
-▶️ How to Run
+# How to Run
 python main.py
 
 
@@ -39,7 +39,7 @@ Then choose:
 1 → Load from Clipboard  
 2 → Select Image File
 
-🧠 How It Works
+# How It Works
 
 OpenCV → Loads and processes images
 
@@ -49,7 +49,7 @@ Pillow → Access clipboard images
 
 webbrowser → Opens URL automatically
 
-📌 Example Use Cases
+# Example Use Cases
 
 Scan QR code from screenshots
 
@@ -59,10 +59,6 @@ Verify QR code content
 
 Lightweight desktop utility
 
-📷 Example Output
-Detected QRCODE: https://example.com
-Opening link in browser...
-
-📄 License
+# License
 
 MIT License
